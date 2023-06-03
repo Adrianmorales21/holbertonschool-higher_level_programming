@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from variable_load_5 import a
+from var_load_ import a
 
 if __name__ == "__main__":
 
