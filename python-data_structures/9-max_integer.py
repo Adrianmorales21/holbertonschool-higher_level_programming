@@ -7,3 +7,4 @@ def max_integer(my_list=[]):
     else:
         my_list.sort()
         my_list.reverse()
+        return my_list[0]
