@@ -5,4 +5,5 @@ def multiple_returns(sentence):
         sentence[0] = None
         return None
     first_char = sentence[0]
-    return len(sentence), first_char
+    lenght = len(sentence)
+    return lenght, first_char
