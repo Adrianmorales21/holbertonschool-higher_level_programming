@@ -5,6 +5,9 @@ This module defines a class 'Square'.
 
 
 class Square:
+    """
+    methods and variables of the square
+    """
 
     def __init__(self, size=0):
         """
