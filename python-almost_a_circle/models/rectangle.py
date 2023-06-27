@@ -4,7 +4,7 @@ from base import Base
 
 
 class Rectangle(Base):
-    """ new Rectangle Class"""
+    """objects and methods of the rectangle Class"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """
@@ -25,41 +25,41 @@ class Rectangle(Base):
 
         @property
         def width(self):
-            """Getter for width
+            """Getter for the width attribute
             """
             return self.__width
 
         @width.setter
         def width(self, value):
-            """set width"""
+            """setter for the width attribute"""
             self.__width = value
 
         @property
         def height(self):
-            """getter for height"""
+            """getter for the height attribute"""
             return self.__height
 
         @height.setter
         def height(self, value):
-            """ height setter"""
+            """setter for the height attribute"""
             self.__height = value
 
         @property
         def x(self):
-            """getter for x"""
+            """getter for the x attribute"""
             return self.__x
 
         @x.setter
         def x(self, value):
-            """x setter """
+            """setter for the x attribute """
             self.__x = value
 
         @property
         def y(self):
-            """getter for y"""
+            """getter for the y attribute"""
             return self.__y
 
         @y.setter
         def y(self, value):
-            """setter for y """
+            """setter for the y attribute"""
             self.__y = value
