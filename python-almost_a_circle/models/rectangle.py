@@ -32,7 +32,10 @@ class Rectangle(Base):
         @width.setter
         def width(self, value):
             """setter for the width attribute"""
-            self.__width = value
+            if value is None:
+                self.width = 0
+            else:
+                self.__width = value
 
         @property
         def height(self):
