@@ -18,13 +18,46 @@ class Rectangle(Base):
             id (int, optional): id of the Rectangle. Defaults to None.
         """
         super().__init__(id)
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
 
         @property
         def width(self):
             """Getter for width
             """
             return self.__width
+
+        @width.setter
+        def width(self, value):
+            """set width"""
+            self.__width = value
+
+        @property
+        def height(self):
+            """getter for height"""
+            return self.__height
+
+        @height.setter
+        def height(self, value):
+            """ height setter"""
+            self.__height = value
+
+        @property
+        def x(self):
+            """getter for x"""
+            return self.__x
+
+        @x.setter
+        def x(self, value):
+            self.__x = value
+
+        @property
+        def y(self):
+            """getter for y"""
+            return self.__y
+
+        @y.setter
+        def y(self, value):
+            self.__y = value
