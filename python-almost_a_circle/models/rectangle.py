@@ -2,9 +2,8 @@
 """
 This module contains the Base class.
 """
-
-
 from models.base import Base
+set
 
 
 class Rectangle(Base):
@@ -148,3 +147,28 @@ class Rectangle(Base):
         rectangle_str = "[Rectangle] (" + id_str + ") " + x_str + \
             "/" + y_str + " - " + width_str + "/" + height_str
         return rectangle_str
+
+    def update(self, *args, **kwargs):
+        """
+        Assigns an argument to each attribute
+
+        Args:
+            *args (ints): values to assign to id, width, height, x, y (in that
+              order) **kwargs: dictionary of attributes and their values
+              to assign
+        """
+        attributes = ['id', 'width', 'height', 'x', 'y']
+        if args:
+            for attr, value in zip(attributes, args):
+                setattr(self, attr, value)
+        else:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
+
+    def to_dictionary(self):
+        """
+        Method to return the dictionary representation of a Rectangle
+        """
+        return {'id': self.id, 'width': self.__width, 'height': self.__height,
+                'x': self.__x, 'y': self.__y}
