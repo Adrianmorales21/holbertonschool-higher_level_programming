@@ -1,21 +1,23 @@
+
 #!/usr/bin/python3
 """
-This module contains a function that prints a full name
+This module will have a function
+the prints the sentece
+(My name is [first_name] [last_name])
 """
 
 
 def say_my_name(first_name, last_name=""):
     """
-    Prints a string with a first name and a last name.
-      Args:
-        first_name: The first name to print. Must be a string.
-        last_name: The last name to print. Must be a string. Defaults to an
-        empty string.
-    Raises:
-        TypeError: If either first_name or last_name are not strings.
+        Function that check that first_name is a str,
+        as well as last_name. If both are str it will
+        print the sentece
+        (My name is [first_name] [last_name])
     """
-    if not isinstance(first_name, str):
-        raise TypeError("first_name must be a string")
-    if not isinstance(last_name, str):
-        raise TypeError("last_name must be a string")
+    if type(first_name) is not str:
+        raise TypeError('first_name must be a string')
+
+    if type(last_name) is not str:
+        raise TypeError('last_name must be a string')
+
     print("My name is {} {}".format(first_name, last_name))
